@@ -1,0 +1,94 @@
+.banner {
+    width: 100%;
+    position: relative;
+    min-height: 25rem;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 -2rem 5rem 1rem rgba(0, 0, 0, 1);
+}
+
+.banner__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .4;
+    z-index: -1;
+}
+
+.banner__info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    color: #fff;
+}
+
+.banner__extraInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.description {
+    width: 70%;
+    overflow: hidden;
+    white-space: wrap;
+    text-overflow: ellipsis;
+}
+
+.banner__info h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.playBtn {
+    width: 4rem;
+    border: none;
+    outline: none;
+    background: rgb(51, 51, 51,.5);
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.playBtn:hover{
+    transition: .3s ease-in-out;
+    background: rgb(181, 181, 181);
+    color: #000;
+}
+
+@media screen and (min-width: 900px) {
+    .banner__info h1 {
+        font-size: 4rem;
+    }
+
+    .banner__info {
+        gap: 1rem;
+    }
+
+    .banner__info p {
+        font-size: 1.1rem;
+    }
+
+    .playBtn {
+        padding: 15px 60px;
+        font-size: 1.25rem;
+        font-weight: 400;
+    }
+
+}
