@@ -9,7 +9,7 @@ const Banner = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const request = await axios.get(requests.fetchOriginals);
+      const request = await axios.get(requests.fetchTrending);
       setMovie(
         request.data.results[
           Math.floor(Math.random() * request.data.results.length - 1)
@@ -32,7 +32,7 @@ const Banner = () => {
       <div className="banner__info">
         <h1>{movie?.title || movie?.name || movie?.original_name}</h1>
         <div className="banner__extraInfo">
-          <p>{movie.first_air_date && `${movie.first_air_date.slice(0, 4)}`}</p>
+          <p>{movie.first_air_date && `${movie.first_air_date ? movie.first_air_date.slice(0, 4): movie.release_date.splice(0,4)}`}</p>
           <span>|</span>
           <p>{movie.vote_average}</p>
         </div>
