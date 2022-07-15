@@ -22,12 +22,14 @@ const Row = ({ title, fetchUrl, largePoster }) => {
 
       <div className="row__posters">
         {movies.map((movie) => (
-          <img
-            key={movie.id}
-            src={`${baseUrl}${largePoster ? movie.poster_path : movie.backdrop_path}`}
-            alt={movie.name}
-            className={`row__poster ${largePoster && "row__largePoster"}`}
-          />
+            <img
+              key={movie.id}
+              src={`${baseUrl}${
+                  largePoster ? movie.poster_path : movie.backdrop_path
+                }`}
+                alt={movie.name}
+                className={`row__poster ${largePoster && "row__largePoster"}`}
+                />
         ))}
       </div>
     </div>

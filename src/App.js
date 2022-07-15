@@ -3,13 +3,12 @@ import instance from "./axios";
 import Row from "./Components/Row/Row";
 import requests from "./requests";
 import Banner from './Components/Banner/Banner'
+import Nav from './Components/Nav/Nav'
 
 function App() {
   return (
     <div className="app">
-
-      {/* nav */}
-      {/* banner */}
+      <Nav/>
       <Banner/>
 
       <Row title="netflix originals" fetchUrl={requests.fetchOriginals} largePoster={true} />
