@@ -20,7 +20,6 @@ const Banner = () => {
 
     fetchData();
   }, []);
-  console.log(movie);
   return (
     <div className="banner">
       <img

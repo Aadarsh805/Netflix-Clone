@@ -20,7 +20,7 @@
 }
 
 .row__poster {
-    width: 100%;
+    width: 10rem;
     max-height: 9rem;
 }
 
@@ -34,17 +34,17 @@
     transform: scale(1.08);
 }
 
-@media screen and (min-width: 760px){
+@media screen and (min-width: 760px) {
     .row__poster {
         max-height: 11.5rem;
     }
-    
-    .row__largePoster{
+
+    .row__largePoster {
         max-height: 20rem;
     }
 }
 
 
-.row__largePoster{
+.row__largePoster {
     max-height: 18rem;
 }
