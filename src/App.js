@@ -6,13 +6,15 @@ import Banner from "./Components/Banner/Banner";
 import Nav from "./Components/Nav/Nav";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Info from "./Components/Info/Info";
+import Landing from './Components/Landing/Landing'
 
 function App() {
   return (
     <div className="app">
       <Router>
         <Routes>
-          <Route path="/" element={<>
+          <Route path='/' exact element={<Landing/>}/>
+          <Route path="/movie" element={<>
                 <Nav />
                 <Banner />
 
