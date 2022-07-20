@@ -3,6 +3,8 @@ import LanguageIcon from "@mui/icons-material/Language";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { Link } from "react-router-dom";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import Accordion from './Accordion/Accordion'
+import {questions} from './Accordion/data'
 
 const Landing = () => {
   return (
@@ -133,6 +135,55 @@ const Landing = () => {
               />
             </video>
           </div>
+        </div>
+        <div className="section-b__part part4">
+          <div className="section-b__content">
+            <h2>Create profiles for children.</h2>
+            <p>
+            Send children on adventures with their favourite characters in a space made just for them—free with your membership.
+            </p>
+          </div>
+          <div className="section-b__imgContainer">
+            <img
+              src="https://occ-0-2087-2164.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABYjXrxZKtrzxQRVQNn2aIByoomnlbXmJ-uBy7du8a5Si3xqIsgerTlwJZG1vMpqer2kvcILy0UJQnjfRUQ5cEr7gQlYqXfxUg7bz.png?r=420"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="section-c ">
+        <h1>Frequently Asked Questions</h1>
+        <div className="accordion__container">
+            {questions.map((question) => (
+                <Accordion 
+                    id={question.id}
+                    question={question.question}
+                    answer={question.answer}
+                />
+            ))}
+        </div>
+
+        <div className="section-c__getStarted">
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+
+            <div className="buttonContainer getStarted">
+            <input
+                type="text"
+                className="email"
+                placeholder="Email address..."
+              />
+              <Link to="/login" className="getStarted__link">
+                <span>Get Started</span>
+                <ArrowForwardIosIcon sx={{ height: "20px", width: "15px" }} />
+              </Link>
+            </div>
+        </div>
+      </div>
+
+      <div className="section-d">
+        <div className="footer">
+                
         </div>
       </div>
     </>
