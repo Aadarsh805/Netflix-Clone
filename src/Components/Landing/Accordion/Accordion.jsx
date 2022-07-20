@@ -15,14 +15,16 @@ const Accordion = ({ key, question, answer }) => {
     <div className="accordion">
       <div className="accordion__questionContainer">
         <h2 className="question">{question}</h2>
-        <button onClick={handleShow} >
-          {showAnswer ? <AddRoundedIcon fontSize="medium" /> : <RemoveRoundedIcon fontSize="large" />}
+        <button onClick={handleShow}>
+          {showAnswer ? (
+            <RemoveRoundedIcon fontSize="large" />
+          ) : (
+            <AddRoundedIcon fontSize="large" />
+          )}
         </button>
       </div>
       <div className="accordion__answer">
-        {showAnswer && (
-            <p className="answer">{answer}</p>
-        )}
+        {showAnswer && <p className="answer">{answer}</p>}
       </div>
     </div>
   );

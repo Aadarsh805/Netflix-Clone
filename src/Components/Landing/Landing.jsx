@@ -183,7 +183,43 @@ const Landing = () => {
 
       <div className="section-d">
         <div className="footer">
-                
+            <h3>
+                Questions? Call 000-800-040-1843
+            </h3>
+
+            <div className="links__columns">
+                <div className="links__column">
+                    <a>FAQ</a>
+                    <a>Investor Relations</a>
+                    <a>Privacy</a>
+                    <a>Speed Test</a>
+                </div>
+                <div className="links__column">
+                    <a>Help Center</a>
+                    <a>Jobs</a>
+                    <a>Cookie Preferences</a>
+                    <a>Legal Notices</a>
+                </div>
+                <div className="links__column">
+                    <a>Account</a>
+                    <a>Ways to Watch</a>
+                    <a>Corporate Information</a>
+                    <a>Only on Netflix</a>
+                </div>
+                <div className="links__column">
+                    <a>Media Center</a>
+                    <a>Terms of Use</a>
+                    <a>Contact Us</a>
+                </div>
+            </div>
+
+            <button className="landing__languageBtn landingBtn">
+              <LanguageIcon sx={{ height: "20px", width: "20px" }} />
+              <span>English</span>
+              <ArrowDropDownIcon sx={{ height: "20px", width: "20px" }} />
+            </button>
+
+            <span>Netflix India</span>
         </div>
       </div>
     </>
