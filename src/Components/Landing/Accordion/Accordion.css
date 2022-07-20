@@ -1,0 +1,35 @@
+.accordion button{
+    background-color: transparent;
+}
+
+.accordion{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    border-radius: 1px;
+}
+
+.accordion__questionContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #303030;
+    padding: 1rem 1.25rem;
+}
+
+.accordion__questionContainer button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.accordion .question{
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.accordion .answer{
+    padding: 1rem 1.25rem;
+    background-color: #303030;
+    font-size: 1.3rem;
+}
