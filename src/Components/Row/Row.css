@@ -36,7 +36,8 @@
 
 @media screen and (min-width: 760px) {
     .row__poster {
-        max-height: 11.5rem;
+        height: 15.5rem;
+        object-fit: cover;
     }
 
     .row__largePoster {

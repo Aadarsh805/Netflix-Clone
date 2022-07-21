@@ -1,3 +1,115 @@
-.login{
+.login {
+    color: #fff;
+    max-width: 100%;
+}
+
+.login-main {
+    width: 100%;
+    height: calc(100vh - 5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login>img {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    opacity: .4;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.login .form {
+    width: 100%;
+}
+
+.form-control {
+    width: 80%;
+    max-width: 30rem;
+    background-color: rgba(0, 0, 0, 0.493);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 8rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+}
+
+.form input {
+    border: none;
+    outline: none;
+    display: block;
+    width: 93%;
+    padding: 1.1rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 3px;
+    background-color: #333;
     color: #fff;
 }
+
+.form input::-webkit-input-placeholder {
+    color: #8c8c8c;
+    font-size: 1rem;
+}
+
+.form-control>h2 {
+    font-size: 2.5rem;
+}
+
+.form-control .submit {
+    cursor: pointer;
+    width: 100%;
+    padding: .9rem;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #e50914;
+}
+
+.form-control .remember {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.remember {
+    color: #8c8c8c;
+}
+
+.remember>span {
+    font-size: .8rem;
+}
+
+.remember__left {
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+}
+
+.form-control .new {
+    font-size: 1rem;
+    color: #8c8c8c;
+}
+
+.new a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.05rem;
+    margin-left: .2rem;
+    font-weight: 600;
+}
+
+.captcha {
+    font-size: .9rem;
+    color: #8c8c8c;
+    margin-top: -1rem;
+}
+
+.captcha a {
+    color: #0071eb;
+    text-decoration: none;
+}
+

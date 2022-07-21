@@ -2,9 +2,12 @@ import "./Info.css";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { API_KEY } from "../../requests";
+import Nav from "../Nav/Nav";
+
+const baseUrl = "https://image.tmdb.org/t/p/original/";
 
 const Info = () => {
-  const [currentMovie, setCurrentMovie] = useState([]);
+  const [movie, setMovie] = useState([]);
   const { id } = useParams();
   useEffect(() => {
     getData();
@@ -16,15 +19,41 @@ const Info = () => {
       `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`
     )
       .then((res) => res.json())
-      .then((data) => setCurrentMovie(data));
+      .then((data) => setMovie(data));
   };
-  console.log(currentMovie);
+  console.log(movie);
 
   return (
     <div className="info">
-      <h1>
-        {currentMovie.title || currentMovie.name || currentMovie.original_name}
-      </h1>
+      <Nav className='nav'/>
+
+      <main className="main">
+        <img
+          src={`${baseUrl}${
+            movie.backdrop_path ? movie.backdrop_path : movie.poster_path
+          }`}
+          alt={movie.name || movie.title}
+          className="bg"
+        />
+        <div className="gradient"></div>
+        <div className="movie__details">
+          {movie.original_title && <h1>{movie.original_title}</h1>}
+          <h1>{movie.title || movie.name || movie.original_name}</h1>
+          <div className="extraInfo">
+            <p>
+              {
+                `${
+                  movie.release_date
+                    ? movie.release_date.slice(0, 4)
+                    : movie.first_air_date.splice(0, 4)
+                }`}
+            </p>
+            <span>|</span>
+            <p>{movie.vote_average}</p>
+            <p className="tagline">{movie.tagline}</p>
+          </div>
+        </div>
+      </main>
     </div>
   );
 };
