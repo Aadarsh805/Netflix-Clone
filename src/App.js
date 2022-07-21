@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Info from "./Components/Info/Info";
 import Landing from "./Components/Landing/Landing";
 import Login from "./Components/Login/Login"
+import SignUp from "./Components/SignUp/SignUp"
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
           />
           <Route path="movie/:id" element={<Info />} />
           <Route path='/login' element={<Login/>} />
+          <Route path='/signup' element={<SignUp/>} />
         </Routes>
       </Router>
     </div>
