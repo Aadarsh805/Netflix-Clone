@@ -21,11 +21,10 @@ const Info = () => {
       .then((res) => res.json())
       .then((data) => setMovie(data));
   };
-  console.log(movie);
 
   return (
     <div className="info">
-      <Nav className='nav'/>
+      <Nav className="nav" />
 
       <main className="main">
         <img
@@ -37,11 +36,15 @@ const Info = () => {
         />
         <div className="gradient"></div>
         <div className="movie__details">
-          {movie.original_title && <h1>{movie.original_title}</h1>}
-          <h1>{movie.title || movie.name || movie.original_name}</h1>
+          {movie.original_title && (
+            <h1 className="original__title">{movie.original_title}</h1>
+          )}
+          <h1 className="title">
+            {movie.title || movie.name || movie.original_name}
+          </h1>
           <div className="extraInfo">
             <p>
-              {
+              {movie.release_date &&
                 `${
                   movie.release_date
                     ? movie.release_date.slice(0, 4)
@@ -50,8 +53,8 @@ const Info = () => {
             </p>
             <span>|</span>
             <p>{movie.vote_average}</p>
-            <p className="tagline">{movie.tagline}</p>
           </div>
+          <p className="tagline">{movie.tagline}</p>
         </div>
       </main>
     </div>

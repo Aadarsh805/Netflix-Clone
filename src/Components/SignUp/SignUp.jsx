@@ -38,7 +38,7 @@ const SignUp = () => {
         <form className="form">
           <div className="input__container">
             <input type="text" placeholder="Name" />
-            <input value={email} onChange={e => setEmail(e.target.value)} type="text" placeholder="Email or phone number" />
+            <input value={email} onChange={e => setEmail(e.target.value)} type="email" placeholder="Email or phone number" />
             <input value={password} onChange={e => setPassword(e.target.value)} type="password" placeholder="password"/>
           </div>
           <button onClick={signup} className="submit">Create Account</button>

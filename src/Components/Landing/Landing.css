@@ -242,10 +242,16 @@
     border-radius: 20px;
     padding: 1rem;
     right: 5rem;
+    max-height: 3rem;
 }
 
 .section-b{
     color: #fff;
+}
+
+
+.section-b__part.part2 .part2__video-container .info {
+    height: auto;
 }
 
 

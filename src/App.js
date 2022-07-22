@@ -6,9 +6,11 @@ import Banner from "./Components/Banner/Banner";
 import Nav from "./Components/Nav/Nav";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Info from "./Components/Info/Info";
+import TvInfo from "./Components/Info/TvInfo";
 import Landing from "./Components/Landing/Landing";
-import Login from "./Components/Login/Login"
-import SignUp from "./Components/SignUp/SignUp"
+import Login from "./Components/Login/Login";
+import SignUp from "./Components/SignUp/SignUp";
+import TvRow from "./Components/Row/TvRow";
 
 function App() {
   return (
@@ -23,7 +25,7 @@ function App() {
                 <Nav />
                 <Banner />
 
-                <Row
+                <TvRow
                   title="netflix originals"
                   fetchUrl={requests.fetchOriginals}
                   largePoster={true}
@@ -42,12 +44,14 @@ function App() {
                   title="romance movies"
                   fetchUrl={requests.fetchRomanticMovies}
                 />
+                <TvRow title="Anime" fetchUrl={requests.fetchAnime} />
               </>
             }
           />
           <Route path="movie/:id" element={<Info />} />
-          <Route path='/login' element={<Login/>} />
-          <Route path='/signup' element={<SignUp/>} />
+          <Route path="tv/:id" element={<TvInfo />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
       </Router>
     </div>
