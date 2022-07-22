@@ -3,7 +3,7 @@
     overflow-y: hidden;
     overflow-x: scroll;
     padding: 10px 20px;
-    gap: 5px;
+    gap: 1px;
 }
 
 .row__posters::-webkit-scrollbar {

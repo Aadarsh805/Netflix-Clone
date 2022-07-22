@@ -45,7 +45,7 @@ const Login = () => {
           </form>
           <div className="remember">
             <div className="remember__left">
-              <input type="checkbox" checked />
+              <input type="checkbox" />
               <span>Remember me</span>
             </div>
             <span className="remember__right">Need help?</span>

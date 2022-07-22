@@ -31,6 +31,7 @@ function App() {
                   largePoster={true}
                 />
                 <Row title="trending now" fetchUrl={requests.fetchTrending} />
+                <TvRow title="Anime" fetchUrl={requests.fetchAnime} />
                 <Row title="Top rated" fetchUrl={requests.fetchTopRated} />
                 <Row
                   title="horror movies"
@@ -44,7 +45,6 @@ function App() {
                   title="romance movies"
                   fetchUrl={requests.fetchRomanticMovies}
                 />
-                <TvRow title="Anime" fetchUrl={requests.fetchAnime} />
               </>
             }
           />
