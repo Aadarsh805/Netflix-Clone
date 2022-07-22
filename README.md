@@ -1,4 +1,4 @@
-Demo link: https://netflix-clone-6509e.web.app/
+Demo link: https://netflix-clone-6509e.web.app/ (Might not work on chrome)
 
 # Getting Started with Create React App
 
