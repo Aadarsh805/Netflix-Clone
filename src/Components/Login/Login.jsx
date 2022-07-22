@@ -38,7 +38,7 @@ const Login = () => {
           <h2>Sign In</h2>
           <form className="form">
             <div className="input__container">
-              <input value={email} onChange={e => setEmail(e.target.value)} type="text" placeholder="Email or phone number" />
+              <input value={email} onChange={e => setEmail(e.target.value)} type="email" placeholder="Email or phone number" />
               <input value={password} onChange={e => setPassword(e.target.value)} type="password" placeholder="password"/>
             </div>
             <button onClick={signin} className="submit">Sign In</button>
